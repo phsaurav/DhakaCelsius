@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dhaka-celsius-api
+  namespace: dhaka-celsius
+spec:
+  selector:
+    app: dhaka-celsius-api
+  ports:
+  - port: 80
+    targetPort: 8000
+  type: ClusterIP
